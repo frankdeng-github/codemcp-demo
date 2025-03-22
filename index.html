@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMCP 演示项目</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .feature-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CodeMCP 演示项目</h1>
+        <p>使用 Claude + CodeMCP 创建和管理的示例项目</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>项目简介</h2>
+            <p>
+                这个项目展示了如何使用Claude人工智能通过CodeMCP直接编写和修改代码。
+                通过AI辅助编程，开发者可以更快地实现功能、解决问题，并学习新的编程技巧。
+            </p>
+        </section>
+
+        <section>
+            <h2>项目功能</h2>
+            
+            <div class="feature-box">
+                <h3>数据处理工具</h3>
+                <p>提供CSV和JSON格式之间的转换，以及数据过滤、排序等功能。</p>
+                <pre><code>python data_processor.py</code></pre>
+            </div>
+            
+            <div class="feature-box">
+                <h3>Web应用</h3>
+                <p>简单的网页界面，展示项目的主要功能和用法。</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>算法示例</h3>
+                <p>包含常用算法的实现示例，如排序、搜索等。</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>代码示例</h2>
+            <p>这是数据处理器的使用示例：</p>
+            <pre><code>
+from data_processor import DataProcessor
+
+# 创建数据处理器实例
+processor = DataProcessor()
+
+# 将CSV转换为JSON
+json_data = processor.csv_to_json("data.csv")
+
+# 过滤数据
+filtered_data = processor.filter_data(
+    json_data, 
+    lambda x: int(x["age"]) > 30
+)
+
+# 排序数据
+sorted_data = processor.sort_data(
+    filtered_data,
+    lambda x: x["name"]
+)
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>开发工具</h2>
+            <ul>
+                <li><a href="https://claude.ai/" target="_blank">Claude</a> - AI助手</li>
+                <li><a href="https://github.com/ezyang/codemcp" target="_blank">CodeMCP</a> - Claude的代码管理工具</li>
+                <li>Python, JavaScript等编程语言</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            由 <a href="https://github.com/frankdeng-github" target="_blank">frankdeng-github</a> 通过 Claude + CodeMCP 创建
+            &copy; 2025 MIT License
+        </p>
+    </footer>
+</body>
+</html>
